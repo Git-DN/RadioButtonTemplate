@@ -1,0 +1,17 @@
+<input
+  #rdbtn
+  type="radio"
+  [id]="groupName + '_' + valueName"
+  (change)="onInputChange($event)"
+  [name]="groupName"
+  [value]="valueName"
+/>
+<label
+  [for]="groupName + '_' + valueName"
+  class="radio-label font-bold"
+  [pTooltip]="tooltip"
+  tooltipPosition="top"
+  [ngClass]="{ 'radio-label-checked ': rdbtn.checked }"
+>
+  {{ label }}
+</label>

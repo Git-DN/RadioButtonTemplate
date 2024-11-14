@@ -1,0 +1,15 @@
+  propertyTypeOptions = [
+    { label: "sell.test1", value: "test1" },
+    { label: "sell.test2", value: "test2" },
+  ];
+
+<div class="flex flex-column md:flex-row gap-2">
+  <app-select-radio-button
+	*ngFor="let option of propertyTypeOptions"
+	formControlName="propertyType"
+	groupName="propertyTypeGroup"
+	[valueName]="option.value"
+	[label]="option.label | translate"
+  >
+  </app-select-radio-button>
+</div>
